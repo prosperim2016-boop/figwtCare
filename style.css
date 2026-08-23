@@ -1,6 +1,7 @@
+```css
 /* =========================================
-   FIGWT DIGNITY CARE
-   MODERN INTRODUCTORY CARE WEBSITE
+   FIGWT CARE
+   MODERN STAFFING & INTRODUCTORY CARE WEBSITE
 ========================================= */
 
 * {
@@ -54,9 +55,9 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     color: #203a43;
 }
 
@@ -467,7 +468,7 @@ header {
 
 
 /* =========================================
-   CARER SECTION
+   CARE PROFESSIONAL SECTION
 ========================================= */
 
 .carers {
@@ -794,6 +795,10 @@ footer {
         padding: 0 5%;
     }
 
+    .logo {
+        font-size: 29px;
+    }
+
     .nav-button {
         display: none;
     }
@@ -845,3 +850,4 @@ footer {
         gap: 35px;
     }
 }
+```
