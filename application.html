@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FiGwt Care - Job Application Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f5f4a;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #1f5f4a;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 8px;
+            margin-top: 35px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 7px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .name-fields,
+        .address-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .options {
+            margin-top: 8px;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 25px;
+            margin-top: 5px;
+        }
+
+        .day {
+            background-color: #f8faf9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .day-name {
+            font-weight: bold;
+            color: #1f5f4a;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .gdpr {
+            background-color: #eef6f2;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .gdpr label {
+            font-weight: normal;
+            margin: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #1f5f4a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #164737;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #666;
+            margin-top: -3px;
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 10px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            .name-fields,
+            .address-fields {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-container">
+
+        <h1>FiGwt Care: Job Application Form</h1>
+
+        <p class="intro">
+            Please complete the application form below to apply for a position with FiGwt Care.
+        </p>
+
+
+        <!-- APPLICATION FORM -->
+
+        <form
+    action="https://formsubmit.co/admin@figwtdignitycare.org"
+    method="POST"
+    enctype="multipart/form-data"
+>
+    <input type="hidden" name="_subject" value="New Job Application - FiGwt Care">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://figwtdignitycare.org/application.html">
+
+
+            <!-- SECTION 1 -->
+
+            <h2>Section 1: About You</h2>
+
+            <p>Basic details about you</p>
+
+
+            <!-- NAME -->
+
+            <label>
+                Name <span class="required">*</span>
+            </label>
+
+            <div class="name-fields">
+
+                <div>
+                    <input
+                        type="text"
+                        name="first_name"
+                        placeholder="First"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <input
+                        type="text"
+                        name="last_name"
+                        placeholder="Last"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <label>
+                Address <span class="required">*</span>
+            </label>
+
+            <div class="address-fields">
+
+                <div class="full-width">
+                    <input
+                        type="text"
+                        name="address_line_1"
+                        placeholder="Address Line 1"
+                        required
+                    >
+                </div>
+
+                <div class="full-width">
+                    <input
+                        type="text"
+                        name="address_line_2"
+                        placeholder="Address Line 2"
+                    >
+                </div>
+
+                <div>
+                    <input
+                        type="text"
+                        name="city"
+                        placeholder="City"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <input
+                        type="text"
+                        name="region"
+                        placeholder="State / Province / Region"
+                    >
+                </div>
+
+                <div class="full-width">
+                    <input
+                        type="text"
+                        name="postal_code"
+                        placeholder="Postal Code"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <label for="phone">
+                Phone <span class="required">*</span>
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+            >
+
+
+            <!-- EMAIL -->
+
+            <label for="email">
+                Email <span class="required">*</span>
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+
+
+            <!-- DRIVING LICENCE -->
+
+            <label>
+                Do you have a current UK/EU driver's license?
+                <span class="required">*</span>
+            </label>
+
+            <div class="options">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="drivers_license"
+                        value="Yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="drivers_license"
+                        value="No"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- DBS -->
+
+            <label>
+                Do you have a transferable Disclosure and Barring Service certificate?
+                <span class="required">*</span>
+            </label>
+
+            <div class="options">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="dbs"
+                        value="Yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="dbs"
+                        value="No"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+
+            <!-- SECTION 2 -->
+
+            <h2>Section 2: About The Position You're Applying For</h2>
+
+            <p>
+                Please explain the type of employment you're looking for.
+            </p>
+
+
+            <!-- EMPLOYMENT TYPE -->
+
+            <label>
+                Employment type <span class="required">*</span>
+            </label>
+
+            <div class="options">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="employment_type"
+                        value="Full Time"
+                        required
+                    >
+                    Full Time
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="employment_type"
+                        value="Part Time"
+                    >
+                    Part Time
+                </label>
+
+            </div>
+
+
+            <!-- START DATE -->
+
+            <label for="start_date">
+                Date Available to Start
+            </label>
+
+            <p class="note">
+                This doesn't need to be an exact date - somewhere close is fine.
+            </p>
+
+            <input
+                type="date"
+                id="start_date"
+                name="start_date"
+            >
+
+
+
+            <!-- SECTION 3 -->
+
+            <h2>Section 3: Availability</h2>
+
+            <p>
+                When in a typical week are you available to work?
+            </p>
+
+
+            <!-- MONDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Monday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="monday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="monday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- TUESDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Tuesday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="tuesday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="tuesday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- WEDNESDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Wednesday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="wednesday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="wednesday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- THURSDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Thursday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="thursday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="thursday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRIDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Friday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="friday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="friday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SATURDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Saturday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="saturday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="saturday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUNDAY -->
+
+            <div class="day">
+
+                <div class="day-name">Sunday</div>
+
+                <div class="options">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="sunday[]"
+                            value="Morning"
+                        >
+                        Morning (8am - 2.30pm)
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="sunday[]"
+                            value="Evening"
+                        >
+                        Evening (4pm - 10pm)
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SECTION 4 -->
+
+            <h2>Section 4: Your Experience</h2>
+
+            <p>
+                If you have experience from the care sector or you have personal
+                experience of caring privately we'd appreciate if you could provide
+                a short summary below. This is by no means mandatory but it helps
+                us to get to know a little about you.
+            </p>
+
+
+            <!-- EXPERIENCE -->
+
+            <label for="experience">
+                Knowledge &amp; Experience
+            </label>
+
+            <p class="note">
+                Give a brief description of any care experiences that you may have
+                which would help you in a care role with FiGwt Care.
+            </p>
+
+            <textarea
+                id="experience"
+                name="experience"
+                placeholder="Please describe your care experience..."
+            ></textarea>
+
+
+            <!-- CV -->
+
+            <label for="cv">
+                If Available, Please Attach a Current CV
+            </label>
+
+            <p class="note">
+                If available, you can upload a copy of your CV here in any format
+                you have available.
+            </p>
+
+            <input
+                type="file"
+                id="cv"
+                name="cv"
+                accept=".pdf,.doc,.docx,.odt,.rtf,.txt"
+            >
+
+
+
+            <!-- SECTION 5 -->
+
+            <h2>Section 5: GDPR &amp; Form Submission</h2>
+
+            <p>
+                To comply with data protection requirements, you must check the box
+                below before submitting the form to confirm that we may use your
+                information in order to process your application.
+            </p>
+
+
+            <!-- GDPR -->
+
+            <div class="gdpr">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="gdpr_agreement"
+                        value="I consent"
+                        required
+                    >
+
+                    I consent to having this website store my submitted information
+                    so they can respond to my inquiry.
+
+                </label>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
