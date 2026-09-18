@@ -187,9 +187,37 @@
 
         <h1>FiGwt Care: Job Application Form</h1>
 
-        <p class="intro">
-            Please complete the application form below to apply for a position with FiGwt Care.
-        </p>
+<p class="intro">
+    Please complete the application form below to apply for a position with FiGwt Care.
+</p>
+
+<div style="text-align: center; margin-bottom: 30px;">
+    <p>
+        <strong>Prefer to complete the application manually?</strong>
+    </p>
+
+    <a
+        href="YOUR-GITHUB-WORD-DOCUMENT-LINK"
+        download
+        style="
+            display: inline-block;
+            padding: 12px 22px;
+            background-color: #1f5f4a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        "
+    >
+        Click Here to Download Application.
+    </a>
+
+    <p class="note">
+        Once completed, please send your application to
+        <strong>admin@figwtdignitycare.org</strong> with your attached <strong>CV</strong> file
+    </p>
+</div>
 
 
         <!-- APPLICATION FORM -->
@@ -199,18 +227,9 @@
     method="POST"
     enctype="multipart/form-data"
 >
-
-    <input type="hidden"
-           name="_subject"
-           value="New Job Application - FiGwt Care">
-
-    <input type="hidden"
-           name="_captcha"
-           value="false">
-
-    <input type="hidden"
-           name="_next"
-           value="https://figwtdignitycare.org/application.html?success=true">
+    <input type="hidden" name="_subject" value="New Job Application - FiGwt Care">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://figwtdignitycare.org/application.html">
 
 
             <!-- SECTION 1 -->
